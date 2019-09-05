@@ -136,7 +136,7 @@ defmodule WechatPay.App do
       "prepayid" => prepay_id,
       "package" => "Sign=WXPay",
       "noncestr" => NonceStr.generate(),
-      "timestamp" => :os.system_time()
+      "timestamp" => :os.system_time(:seconds)
     }
 
     data
